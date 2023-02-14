@@ -1,0 +1,51 @@
+<div class="cart-top container-fluid">
+    <div class="container d-flex">
+        <div class="items">
+            <a> 
+                <img style="width: 70px; margin-top: 21px;" src="https://assets.tatacliq.com/medias/sys_master/images/45900501352478.jpg" >
+               <!-- <img src="https://cdn-icons-png.flaticon.com/512/7032/7032018.png">-->
+                <h6>All Products</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a> 
+                <img style="width: 70px; margin-top: 21px;" src="https://cdn.shopify.com/s/files/1/1832/4455/products/1290_Icon-Shirt-SIG_Solid-Black_Kitsbow-2023_PDP_FR-1000x1000.png?v=1673018294&width=630" >
+               <!-- <img src="https://cdn-icons-png.flaticon.com/512/7032/7032018.png">-->
+                <h6>Shirt</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a> 
+                <img style="width: 70px; margin-top: 21px;" src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/d54a274cb6ca4c4ab4e7ad0b00cd24dc_9366/future-icons-logo-graphic-hoodie.jpg" >
+               <!-- <img src="https://cdn-icons-png.flaticon.com/512/7032/7032018.png">-->
+                <h6>Sweatshirt</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a> 
+                <img style="width: 70px; margin-top: 21px;" src="https://image.spreadshirtmedia.com/image-server/v1/products/T210A2PA4301PT17X32Y67D1030571078W26593H26593/views/1,width=378,height=378,appearanceId=2,backgroundColor=F2F2F2,modelId=1543,crop=list/icon.jpg" >
+               <!-- <img src="https://cdn-icons-png.flaticon.com/512/7032/7032018.png">-->
+                <h6>T-Shirt</h6>
+            </a>
+        </div>
+        
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList |paginate:{itemsPerPage:5,currentPage:page,totalItems:totalLength}">   
+        <div class="card col-md-10">
+            <img src="" alt="">
+            <h5>{{item.title}}</h5>
+            <p><strong>Price:</strong>{{item.currencyFormat}}{{item.price}}</p>
+            <p>{{item.description}}</p>
+            <button style="size: 10px;" class="btn btn-success" (click)="addtoCart(item)">Add to Cart</button>
+        </div>
+        </ng-container> 
+        <div class="pagination">
+            <pagination-controls (pageChange)="page=$event"></pagination-controls>
+        </div>
+    </div>
+</div>
+
+
