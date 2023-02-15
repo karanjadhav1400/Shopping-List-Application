@@ -12,6 +12,7 @@ export class ProductsComponent {
   productList:any;
   totalLength:any;
   page: number = 1;
+  filterText:string = ''; 
   constructor(private api:ApiService,
     private cartApi:CartapiService){ }
 
