@@ -46,8 +46,9 @@
         <div class="card col-md-10">
             <img src="" alt="">
             <h5>{{item.title}}</h5>
-            <p><strong>Price:</strong>{{item.currencyFormat}}{{item.price}}</p>
-            <p>{{item.description}}</p>
+            <p><strong>Price:</strong> {{item.currencyFormat}}{{item.price}}</p>
+            <p><b>Description: </b> {{item.description}}</p>
+            <p><b>Style: </b>{{item.style}}</p>
             <button style="size: 10px;" class="btn btn-success" (click)="addtoCart(item)">Add to Cart</button>
         </div>
         </ng-container> 

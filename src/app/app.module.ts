@@ -10,7 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import {NgxPaginationModule} from 'ngx-pagination';
-import { FilterPipe } from './filter.pipe';
+import { FilterPipe } from './filter.pipe';           //Filter
 import { FormsModule } from '@angular/forms';
 
 
@@ -21,15 +21,15 @@ import { FormsModule } from '@angular/forms';
     ProductsComponent,
     CartComponent,
     FooterComponent,
-    FilterPipe
+    FilterPipe           //Filter
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule,      // Filter
     HttpClientModule, 
     NgxPaginationModule,   
-    OAuthModule.forRoot()//Oauth
+    OAuthModule.forRoot() //Oauth
   ],
   providers: [],
   bootstrap: [AppComponent]
